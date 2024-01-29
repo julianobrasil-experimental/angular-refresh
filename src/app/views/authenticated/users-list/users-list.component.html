@@ -1,0 +1,22 @@
+@if (showSpinner()) {
+<div class="spinner-container">
+    <mat-spinner />
+</div>
+} @else {
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (user of users(); track user.email) {
+        <tr>
+            <td> <a [routerLink]="['/', 'users', user.email]">{{user.name}}</a> </td>
+            <td> {{user.email}}</td>
+        </tr>
+        }
+    </tbody>
+</table>
+}

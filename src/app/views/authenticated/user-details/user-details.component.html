@@ -1,0 +1,15 @@
+<form [formGroup]="_form" novalidate (ngSubmit)="_submitForm($event)">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+        <mat-icon matSuffix>person_outline</mat-icon>
+        <mat-hint>eg. John Doe</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input matInput type="email" formControlName="email">
+        <mat-icon matSuffix>mail_outline</mat-icon>
+        <mat-hint>eg. your.email&#64;domain.com</mat-hint>
+    </mat-form-field>
+</form>
